@@ -1,0 +1,68 @@
+.App {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.clock-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2.5rem 4rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+  font-family: 'DotGothic16', 'Courier New', monospace;
+  font-size: 4.5rem;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 2px 2px 0 #222, 4px 4px 0 #000;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.18em;
+}
+
+.date {
+  font-family: 'DotGothic16', 'Courier New', monospace;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 1.5px 1.5px 0 #222, 3px 3px 0 #000;
+  letter-spacing: 0.12em;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .time {
+    font-size: 2.8rem;
+  }
+  
+  .date {
+    font-size: 1.2rem;
+  }
+  
+  .clock-overlay {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .time {
+    font-size: 1.6rem;
+  }
+  
+  .date {
+    font-size: 0.9rem;
+  }
+  
+  .clock-overlay {
+    padding: 1rem 1.2rem;
+  }
+} 
